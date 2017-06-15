@@ -1,0 +1,14 @@
+<view class="container list">
+    <view class="item">
+        <scroll-view scroll-y="yes" style="height:100%;" bindscrolltolower="scrollBottomCB" class="item-content">
+            <navigator wx:for="{{listData}}" wx:key="videoList" wx:for-index="index" wx:for-item="item" url="../video/video?videoId={{item.videoId}}" class="list-nav clearfix">
+                <image class="list-cover" src="{{item.videoCoverUrl}}"></image>
+                <view class="item-content-list">
+                    <view class="list-title">{{item.videoTitle}}</view>
+                    <view class="list-duration">视频时长：{{item.videoDuration}}</view>
+                </view>
+                <view class="arrow arrow-right"></view>
+            </navigator>
+        </scroll-view>
+    </view>
+</view>

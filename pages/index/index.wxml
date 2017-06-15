@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="container">
+   <image src="http://pic.click-v.com/FKLY6u05MMX95LVa-lC2eaZi-TA=/FsN93urJtxFdqbnaJ8_8NTNMiQAF" class="logo"></image>
+  <view class="banner">
+    <view class="h2">Bye ! 无聊</view>
+    <view class="h2">每时每刻就要好看</view>
+  </view>
+  <view wx:if="{{!dailyList.videodata}}" class="loading-text">Loading...</view>
+  <!-- now time -->
+  <view class="section" wx:if="{{dailyList.videodata}}">
+    <!-- section title -->
+    <view class="section-title">
+      <text>当前时段</text>
+    </view>
+    <!-- section content -->
+    <view class="section-content">
+      <!-- item start -->
+      <view class="item">
+        <view class="item-title">{{dailyList.videodata.titleName}}</view>
+        <view class="item-content">
+          <navigator wx:for="{{dailyList.videodata.videos}}" wx:key="videoList" wx:for-index="index" wx:for-item="item" url="../video/video?videoId={{item.videoId}}" class="list-nav clearfix">
+            <image class="list-cover" mode="scaleToFill" src="{{item.videoCoverUrl}}"></image>
+            <view class="item-content-list">
+              <view class="list-title">{{item.videoTitle}}</view>
+              <view class="list-duration">视频时长：{{item.videoDuration}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <!-- item over -->
+    </view>
+    <!-- section footer -->
+    <navigator url="../list/list?keyword={{dailyList.videodata.keyword}}" class="section-footer">
+      <text>查看更多</text>
+      <view class="arrow arrow-right"></view>
+    </navigator>
+  </view>
+  <!-- other time -->
+  <view class="section" wx:if="{{dailyList.videodata}}">
+    <!-- section title -->
+    <view class="section-title">
+      <text>其他时段</text>
+    </view>
+    <!-- section content -->
+    <view class="section-content">
+      <!-- item start -->
+      <view class="item item-other">
+        <view class="item-content">
+          <navigator wx:for="{{dailyList.dailyData}}" wx:key="dailyData" wx:for-index="index" wx:for-item="item" url="../list/list?keyword={{item.keyword}}" class="list-nav clearfix">
+            <image class="list-cover" mode="{{scaleToFill}}" src="{{item.coverUrl}}"></image>
+            <view class="item-content-list">
+              <view class="list-title">{{item.name}}</view>
+              <view class="arrow arrow-right"></view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <!-- item over -->
+    </view>
+  </view>
+</view>

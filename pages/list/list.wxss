@@ -1,0 +1,13 @@
+page,.container,.item,.item-content,scroll-view{
+    height: 100%;
+}
+.list{
+    background-color: #fff;
+    border-top: 1px solid #e7e7e7;
+}
+.item-content{
+    padding-left:28rpx;
+}
+.item-content{
+    width: auto;
+}

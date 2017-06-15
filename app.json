@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/video/video"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor": "#333",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "点视小程序",
+    "navigationBarTextStyle":"black"
+  }
+}

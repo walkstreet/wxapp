@@ -1,0 +1,25 @@
+<view class="container">
+    <!-- video start -->
+    <video id="myVideo" class="video" src="{{videoInfo.videoUrl}}" controls objectFit="cover"></video>
+    <!-- video desc -->
+    <view class="item item-other">
+        <view class="item-content">
+            <view class="list-nav clearfix">
+                <image class="list-cover icon-brand" src="{{videoInfo.brand.brandIconUrl}}"></image>
+                <view class="item-content-list">
+                    <view class="list-title">{{videoInfo.brand.brandName}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="section">
+        <view class="section-title">视频介绍</view>
+        <view class="section-content">
+            <view class="content">
+                <view class="video-title">{{videoInfo.videoTitle}}</view>
+                <view class="video-content">视频时长：{{videoInfo.videoDuration}}</view>
+                <view class="video-content">{{videoInfo.videoDescription}}</view>
+            </view>
+        </view>
+    </view>
+</view>

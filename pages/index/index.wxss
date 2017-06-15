@@ -1,0 +1,21 @@
+/*--banner--*/
+.banner{
+    margin: 40rpx 28rpx 0 28rpx;
+    width: 40rpx;
+    border-bottom: 2rpx solid #fff;
+    color: #fff;
+    white-space: nowrap;
+    padding-bottom: 20rpx;
+}
+.logo{
+    margin: 50rpx 0 0 28rpx;
+    width: 160rpx;
+    height:160rpx;
+    border-radius: 50%;
+    border: 2rpx solid #ccc;
+    box-shadow: 0 0 10rpx #ccc;
+}
+.h2{
+    font-size: 60rpx;
+    line-height: 80rpx;
+}
